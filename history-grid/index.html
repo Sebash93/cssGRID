@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>History Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="buttons">
+        <button id="original">Original version</button>
+        <button id="flash-back">Flash back</button>
+        <button id="hammer-transform">Hammer transformation</button>
+    </div>
+    <div class="thor-container hammer-transform">
+        <div class="thor-1">
+            <img src="./images/thor_01.jpg" alt="Thor 1">
+        </div>
+        <div class="thor-2">
+            <img src="./images/thor_02.jpg" alt="Thor 2">
+        </div>
+        <div class="thor-3">
+            <img src="./images/thor_03.jpg" alt="Thor 3">
+        </div>
+        <div class="thor-4">
+            <img src="./images/thor_04.jpg" alt="Thor 4">
+        </div>
+        <div class="thor-5">
+            <img src="./images/thor_05.jpg" alt="Thor 5">
+        </div>
+        <div class="thor-6">
+            <img src="./images/thor_06.png" alt="Thor 6">
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        let container = $(".thor-container");
+        $("button#flash-back").click(() => {
+            console.log("Button")
+            container.removeClass("hammer-transform");
+            container.addClass("flash-back");
+        })
+        $("button#hammer-transform").click(() => {
+            container.removeClass("flash-back");
+            container.addClass("hammer-transform");
+        })
+        $("button#original").click(() => {
+            container.removeClass("flash-back");
+            container.removeClass("hammer-transform");
+        })
+    </script>
+</body>
+
+</html>
