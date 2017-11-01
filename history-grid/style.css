@@ -1,6 +1,3 @@
-html, body {
-    margin: 0;
-}
 .thor-container {
     display: grid;
     grid-template-columns: 300px 300px;
@@ -28,12 +25,6 @@ html, body {
         "power mightiest-warrior"
 }
 
-.thor-container img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-}
-
 .thor-1 {
     grid-area: lightning;
 }
@@ -53,7 +44,17 @@ html, body {
     grid-area: mightiest-warrior;
 }
 
-/* Buttons */
+/* Non grid-related styles */
+html, body {
+    margin: 0;
+}
+
+.thor-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
 .buttons {
     background: rgb(228, 208, 94);
     color: #000;
