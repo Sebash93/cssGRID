@@ -1,0 +1,51 @@
+.civil-war-container {
+    padding: 10px;
+    height: 100vh;
+    box-sizing: border-box;
+    max-width: 700px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1.3fr 1fr 1.1fr;
+    grid-template-areas: 
+        "american-captain american-captain"
+        "spiderman iron-man-1"
+        "iron-man-2 iron-man-2";
+    grid-gap: 10px;
+}
+
+
+.civil-war-1 {
+    grid-area: american-captain;
+    background: url("./images/civil-war-scenes_01.png");
+}
+
+.civil-war-2 {
+    grid-area: spiderman;
+    background: url("./images/civil-war-scenes_02.jpg");
+}
+
+.civil-war-3 {
+    grid-area: iron-man-1;
+    background: url("./images/civil-war-scenes_03.jpg");
+}
+
+.civil-war-4 {
+    grid-area: iron-man-2;
+    background: url("./images/civil-war-scenes_04.jpg");
+}
+
+/* Non grid-relevant css */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+.civil-war-container > div {
+    background-size: cover;
+    background-position: top center;
+}
